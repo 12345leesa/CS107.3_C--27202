@@ -1,0 +1,72 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Encapsulation_Q2
+{
+    public class ArithmrticOperations
+    {
+        private double number1;
+        private double number2;
+
+        public double Number1
+        {
+            get { return number1; }
+            set { number1 = value; }
+
+        }
+
+        public double Number2
+        {
+            get { return number2; }
+            set { number2 = value; }
+        }
+
+        public double summation()
+        {
+            return number1 + number2;
+        }
+        public double subtraction()
+        {
+            return number1 - number2;
+        }
+        public multiplication()
+        public double divition()
+
+        {
+            if (number2 != 0)
+                return number1 / number2;
+            else
+                throw new divideByZeroException("cannot  divide by zero");
+        }
+
+        public class progrm
+        {
+            public static void Main(string[] args)
+            {
+                ArithmeticOperations operations = new ArithmeticOperations();
+
+                Console.WriteLine("enter number 1");
+                double number1 = double.Parse(Console.ReadLine());
+                operations.Number1 = number1;
+
+                Console.WriteLine("enter number 2");
+                double number2 = double.Parse(Console.ReadLine());
+                operations.Number2 = number2;
+
+                Console.WriteLine("summation " +operations.summation());
+                Console.WriteLine("subtraction " +operations.subtraction());
+                Console.WriteLine("multiplication" +operations.multiplication());
+
+                _=Console.ReadLine();
+
+
+
+
+
+            }
+        }
+}
